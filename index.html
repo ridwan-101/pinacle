@@ -1,29 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <base href="/PINNACLEAISOLUTIONS/" />
-
+  <base href="/AILEARNINGLAB-HUB/" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pinnacle AI Solutions</title>
 
-  <!-- ✅ Tailwind CDN -->
+  <!-- Tailwind CSS -->
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet" />
 
-  <!-- ✅ Font Awesome -->
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 
-  <!-- ✅ Google Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 
-  <!-- ✅ Local CSS (no ./ prefix) -->
-  <link rel="stylesheet" href="style.css" />
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="pinnacle-ai-solutions.css" />
 </head>
-<body>
 
-  <!-- 🧠 PLACE your entire HTML site body here (Hero, Navbar, Sections, etc.) -->
+<body class="bg-white text-gray-800 font-sans">
 
-  <!-- ✅ Local JavaScript (no ./ prefix) -->
-  <script src="main.js"></script>
+  <!-- Preloader -->
+  <div class="preloader"><div class="loader"></div></div>
+
+  <!-- Scroll Indicator -->
+  <div class="scroll-indicator"></div>
+
+  <!-- Back to Top Button -->
+  <div class="back-to-top"><i class="fas fa-arrow-up"></i></div>
+
+  <!-- Chatbot Toggle -->
+  <div class="chatbot-toggle"><i class="fas fa-robot"></i></div>
+
+  <!-- Chatbot Container -->
+  <div class="chatbot-container">
+    <div class="chatbot-header">
+      <div>
+        <h3>AI Assistant</h3>
+        <small>Powered by Pinnacle AI</small>
+      </div>
+      <button class="chatbot-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages">
+      <div class="message bot">
+        <div class="message-content">Hello! I'm your AI assistant. How can I help you today?</div>
+      </div>
+    </div>
+    <div class="chatbot-input">
+      <input type="text" placeholder="Type your message..." />
+      <button><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+
+  <!-- Notification -->
+  <div class="notification">
+    <button class="notification-close"><i class="fas fa-times"></i></button>
+    <h4>Welcome to Pinnacle AI!</h4>
+    <p>Explore our cutting-edge AI solutions.</p>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar fixed top-0 left-0 w-full z-50 py-4 bg-white shadow">
+    <div class="container mx-auto px-4 flex justify-between items-center">
+      <a href="#home" class="text-2xl font-bold">
+        <span class="gradient-text">Pinnacle AI</span><br>
+        <span class="text-sm font-medium text-gray-500">SOLUTIONS</span>
+      </a>
+      <ul class="hidden md:flex space-x-6">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#ai-solutions" class="nav-link">AI Solutions</a></li>
+        <li><a href="#integrations" class="nav-link">Integrations</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <a href="#contact" class="btn btn-primary hidden md:block">Get Started</a>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero py-20 md:py-32">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2">
+        <div class="mb-4 text-sm text-gray-600"><i class="fas fa-robot mr-2"></i>Next-Gen AI</div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">
+          Transforming Business with <span class="gradient-text">Intelligent AI</span> Solutions
+        </h1>
+        <p class="text-lg text-gray-500 mb-8">
+          Pinnacle AI delivers cutting-edge artificial intelligence solutions that drive innovation, efficiency, and growth for businesses of all sizes.
+        </p>
+        <div class="flex space-x-4">
+          <a href="#services" class="btn btn-primary">Explore Services <i class="fas fa-arrow-right ml-2"></i></a>
+          <a href="#contact" class="btn btn-outline">Contact Us</a>
+        </div>
+        <div class="mt-6 flex flex-wrap gap-2 text-sm text-gray-600">
+          <span>Machine Learning</span>
+          <span>Neural Networks</span>
+          <span>Computer Vision</span>
+          <span>NLP</span>
+          <span>Data Analytics</span>
+        </div>
+      </div>
+      <div class="md:w-1/2 mt-10 md:mt-0">
+        <img src="https://images.unsplash.com/photo-1677442135136-760c813028c0?q=80&w=2832&auto=format&fit=crop" alt="AI Visualization" class="rounded-lg shadow-xl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Our Services</h2>
+        <p class="text-gray-500 mt-4">A comprehensive suite of AI-powered services designed to help your business thrive in the digital age.</p>
+      </div>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="p-6 bg-white rounded-lg shadow">
+          <i class="fas fa-mobile-alt text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">App Development</h3>
+          <p class="text-gray-600 text-sm">Cross-platform, native mobile, and web development with AI integration.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <i class="fas fa-rocket text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Deployment</h3>
+          <p class="text-gray-600 text-sm">Cloud, Docker, Kubernetes, CI/CD – seamless infrastructure for your stack.</p>
+        </div>
+        <div class="p-6 bg-white rounded-lg shadow">
+          <i class="fas fa-cogs text-2xl mb-4"></i>
+          <h3 class="text-xl font-semibold mb-2">Maintenance</h3>
+          <p class="text-gray-600 text-sm">24/7 support, optimization, and security updates to keep your apps running smooth.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">About Us</h2>
+        <p class="text-gray-500 mt-4">Founded in 2018, we're a passionate team of technologists and AI innovators.</p>
+      </div>
+      <div class="flex flex-col md:flex-row items-center">
+        <div class="md:w-1/2 mb-6 md:mb-0">
+          <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=2940&auto=format&fit=crop" alt="Our Team" class="rounded-lg shadow-lg" />
+        </div>
+        <div class="md:w-1/2 md:pl-12">
+          <h3 class="text-xl font-semibold mb-4">Mission & Impact</h3>
+          <p class="text-gray-600 mb-4">From startups to enterprises, we help organizations integrate smart solutions and future-ready systems using the latest in machine learning, NLP, and automation.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-20 bg-gray-100">
+    <div class="container mx-auto px-4">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl font-bold">Contact Us</h2>
+        <p class="text-gray-500 mt-4">Let’s talk AI – request a quote, start a project, or ask us anything.</p>
+      </div>
+      <form class="max-w-xl mx-auto space-y-6 bg-white p-8 rounded-lg shadow">
+        <input type="text" placeholder="Your Name" class="w-full border px-4 py-2 rounded" />
+        <input type="email" placeholder="Email Address" class="w-full border px-4 py-2 rounded" />
+        <input type="text" placeholder="Subject" class="w-full border px-4 py-2 rounded" />
+        <textarea rows="5" placeholder="Your Message..." class="w-full border px-4 py-2 rounded"></textarea>
+        <button class="btn btn-primary w-full">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-gray-300 py-8">
+    <div class="container mx-auto px-4 text-center">
+      <p>&copy; 2025 Pinnacle AI Solutions. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Local JavaScript -->
+  <script src="pinnacle-ai-solutions.js"></script>
 </body>
 </html>
